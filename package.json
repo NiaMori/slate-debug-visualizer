@@ -2,8 +2,13 @@
   "name": "slate-debug-visualizer",
   "version": "0.0.1",
   "description": "a slate integration for vscode-debug-visualizer",
+  "homepage": "https://github.com/NiaMori/slate-debug-visualizer",
   "author": "NiaMori",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NiaMori/slate-debug-visualizer"
+  },
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -28,5 +33,10 @@
   "dependencies": {
     "@hediet/debug-visualizer-data-extraction": "^0.13.1",
     "slate": "^0.59.0"
-  }
+  },
+  "keywords": [
+    "slate",
+    "debug",
+    "visualization"
+  ]
 }
