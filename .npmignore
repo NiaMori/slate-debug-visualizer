@@ -1,2 +1,4 @@
-dist
 examples
+.gitignore
+rollup.config.js
+tsconfig.json
