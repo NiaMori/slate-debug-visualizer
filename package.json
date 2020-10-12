@@ -1,6 +1,6 @@
 {
   "name": "slate-debug-visualizer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a slate integration for vscode-debug-visualizer",
   "homepage": "https://github.com/NiaMori/slate-debug-visualizer",
   "author": "NiaMori",
