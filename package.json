@@ -20,13 +20,17 @@
     "build:declaration": "tsc --outDir /tmp --declarationDir dist/ --declaration true --declarationMap true",
     "build:rollup": "rollup --config rollup.config.js",
     "build": "yarn run build:rollup && yarn run build:declaration",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "test": "yarn run jest --runInBand"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^6.0.0",
+    "@types/jest": "^26.0.14",
+    "jest": "^26.5.2",
     "rollup": "^2.29.0",
+    "ts-jest": "^26.4.1",
     "tslib": "^2.0.3",
     "typescript": "^4.0.3"
   },
