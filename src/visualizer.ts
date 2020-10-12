@@ -33,23 +33,26 @@ export const configureVisualizer = (options: VisualizerOptions) : Visualizer => 
       return resultFromUser
     }
 
-    const { node, key, data } = props
+    const { data } = props
 
-    if (Editor.isEditor(node) && key === 'selection') {
-      if (data) {
-        const selection = data as Range
-        const { focus, anchor } = selection
-        return `anchor: ([${anchor.path}], ${anchor.offset}) focus: ([${focus.path}], ${focus.offset})`
-      } else {
-        return 'null'
-      }
-    } else if (typeof data === 'string') {
-      return `"${data}"`
-    } else if (typeof data === 'number') {
-      return data.toString()
-    } else {
-      return '[Unknown Field]'
+    if (data === null) {
+      return 'null'
     }
+
+    if (data === undefined) {
+      return 'undefined'
+    }
+
+    if (Range.isRange(data)) {
+      const { focus, anchor } = data
+      return `anchor: ([${anchor.path}], ${anchor.offset}) focus: ([${focus.path}], ${focus.offset})`
+    }
+    
+    if (['string', 'number', 'boolean', 'object'].includes(typeof data)) {
+      return JSON.stringify(data)
+    }
+
+    return '[Unknown Field]'
   }
 
   const getVisualizationData = (node: Node) : TreeVisualizationData => {
