@@ -1,0 +1,25 @@
+{
+  "name": "slate-debug-visualizer-example",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": "true",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "@pika/react": "^16.13.1",
+    "@pika/react-dom": "^16.13.1",
+    "slate": "^0.59.0",
+    "slate-debug-visualizer": "^0.0.3",
+    "slate-history": "^0.59.0",
+    "slate-react": "^0.59.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "typescript": "^3.9.3",
+    "vite": "^1.0.0-rc.1",
+    "vite-plugin-react": "^3.0.0"
+  }
+}
