@@ -21,13 +21,17 @@
     "build:rollup": "rollup --config rollup.config.js",
     "build": "yarn run build:rollup && yarn run build:declaration",
     "clean": "rm -rf dist",
-    "test": "yarn run jest --runInBand"
+    "test": "yarn run jest --runInBand",
+    "lint": "yarn run eslint src/**.ts"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^6.0.0",
     "@types/jest": "^26.0.14",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
     "jest": "^26.5.2",
     "rollup": "^2.29.0",
     "ts-jest": "^26.4.1",
